@@ -9,5 +9,15 @@ class Register extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['student_id', 'course_id'];
+    // Relationship กับ Student
+    public function student()
+    {
+        return $this->belongsTo(Student::class, 'student_id');
+    }
+
+    // Relationship กับ Course
+    public function course()
+    {
+        return $this->belongsTo(Course::class, 'course_id');
+    }
 }

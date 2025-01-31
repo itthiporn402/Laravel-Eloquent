@@ -9,7 +9,15 @@ use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\StudentController;
+use App\Http\Controllers\CourseController;
+use App\Http\Controllers\RegisterController;
+use App\Http\Controllers\TeacherController;
 
+Route::get('/students', [StudentController::class, 'index']);
+Route::get('/courses', [CourseController::class, 'index']);
+Route::get('/registers', [RegisterController::class, 'index']);
+Route::get('/teachers', [TeacherController::class, 'index']);
 
 Route::get('/products', [ProductController::class, 'index']);
 
